@@ -1,0 +1,33 @@
+{
+    "name": "@livequery/firestore",
+    "repository": {
+        "url": "https://github.com/livequery/firestore"
+    },
+    "version": "1.0.1",
+    "description": "",
+    "main": "build/index.js",
+    "types": "build/index.d.ts",
+    "files": [
+        "build/**/*"
+    ],
+    "dependencies": {
+        "@types/uuid": "^8.3.0",
+        "firebase": "^9.22.2",
+        "query-string": "^7.0.1",
+        "rxjs": "^7.8.1",
+        "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+        "@types/firebase": "^3.2.1",
+        "@livequery/types": "1.0.37",
+        "typescript": "4.9.5"
+    },
+    "peerDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rm -rf build; tsc -b .",
+        "deploy": "yarn build; git add .; git commit -m \"Update\"; git push origin master; npm publish --access public"
+    },
+    "author": "",
+    "license": "ISC"
+}
